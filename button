@@ -1,0 +1,22 @@
+import $ from "jquery";
+
+// Select the root element
+const rootApp = document.getElementById("root");
+
+// Initially set the button to ON
+rootApp.innerHTML = '<button id="toggleButton">ON</button>';
+
+// Once the DOM is ready
+$(document).ready(function() {
+  // Add a click event listener to the button
+  $("#toggleButton").click(function() {
+    // Check the current text of the button and toggle
+    if ($(this).text() === "ON") {
+      // Change text to oFF
+      $(this).text("oFF");
+    } else {
+      // Change text to ON
+      $(this).text("ON");
+    }
+  });
+});
